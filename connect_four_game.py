@@ -1,5 +1,6 @@
 from http.client import OK
 import sys
+import time
 
 row_count = int(6)
 column_count = int(7)
@@ -63,9 +64,11 @@ def check_winner(check_board):
         for y in range(column_count-3): #Dla każdego y w przedziale (0,4)
             if check_board[x][y] == check_board[x][y+1] == check_board[x][y+2] == check_board[x][y+3] == 1: #Jeśli [0][0] = [0][1] = [0][2] = [0][4] = 1
                 print('Player 1 wins')
+                time.sleep(10)
                 sys.exit(0)
             elif check_board[x][y] == check_board[x][y+1] == check_board[x][y+2] == check_board[x][y+3] == 2:
                 print('Player 2 wins')
+                time.sleep(10)
                 sys.exit(0)
 
 #--------------sprawdzanie wygranej w kolumnie------------------ 
@@ -74,9 +77,11 @@ def check_winner(check_board):
         for x in range(row_count-3):
             if check_board[x][y] == check_board[x+1][y] == check_board[x+2][y] == check_board[x+3][y] == 1:
                 print('Player 1 wins')
+                time.sleep(10)
                 sys.exit(0)
             elif check_board[x][y] == check_board[x+1][y] == check_board[x+2][y] == check_board[x+3][y] == 2:
                 print('Player 2 wins')
+                time.sleep(10)
                 sys.exit(0)
 
 #--------------sprawdzanie wygranej po skosie malejąco------------------ 
@@ -85,9 +90,11 @@ def check_winner(check_board):
         for y in range(column_count-3):
             if check_board[x][y] == check_board[x+1][y+1] == check_board[x+2][y+2] == check_board[x+3][y+3] == 1:
                 print('Player 1 wins')
+                time.sleep(10)
                 sys.exit(0)
             elif check_board[x][y] == check_board[x+1][y+1] == check_board[x+2][y+2] == check_board[x+3][y+3] == 2:
                 print('Player 2 wins')
+                time.sleep(10)
                 sys.exit(0)
 
  #--------------sprawdzanie wygranej po skosie rosnąco------------------ 
@@ -96,9 +103,11 @@ def check_winner(check_board):
         for y in range(column_count-3):
             if check_board[x][y+3] == check_board[x+1][y+2] == check_board[x+2][y+1] == check_board[x+3][y] == 1:
                 print('Player 1 wins')
+                time.sleep(10)
                 sys.exit(0)
             elif check_board[x][y+3] == check_board[x+1][y+2] == check_board[x+2][y+1] == check_board[x+3][y] == 2:
                 print('Player 2 wins')
+                time.sleep(10)
                 sys.exit(0)               
 
 print("""\nConnect four\n""")
@@ -119,6 +128,7 @@ while True:
         check_winner(board)
     else:
         print('All fields are filled')
+        time.sleep(10)
         sys.exit(0)
 
     
