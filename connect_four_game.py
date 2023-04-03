@@ -1,4 +1,3 @@
-from http.client import OK
 import sys
 import time
 
