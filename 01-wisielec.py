@@ -1,11 +1,3 @@
-#ok sprawdzać czy użytkownik wpisuje tylko jedną literę
-#ok nie pozwalać wpisać tej samej litery
-#ok lista słów i losować słowa
-#zamiast def słowa samemu to korzystać z biblioteki
-#ok zawsze losować inne słowo
-#ok restart gry
-#ok? poziomy trudności w zależności od liczby prób
-
 import random
 from re import A
 import sys
